@@ -8,7 +8,7 @@ class CustomTextField extends StatefulWidget {
     this.onChanged,
     this.isPassword = false,
     this.validator,
-    required this.text,
+    this.text,
     this.controller,
     this.prefixIcon,
   });
@@ -16,7 +16,7 @@ class CustomTextField extends StatefulWidget {
   final bool? isPassword;
   final Function(String)? onChanged;
   final String? Function(String?)? validator;
-  final String text;
+  final String? text;
   final TextEditingController? controller;
 
   @override
@@ -44,26 +44,20 @@ class _CustomTextFieldState extends State<CustomTextField> {
       obscureText: _isObscured ? true : false,
       decoration: InputDecoration(
           filled: true,
-          fillColor: Colors.white,
+          fillColor: Colors.grey[200],
           hintText: widget.text,
-          hintStyle: AppStyles.styleSemiBold16.copyWith(
-            color: Colors.grey[500],
-          ),
+          hintStyle: AppStyles.styleRegular16,
           contentPadding:
-              const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8),
+              const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(12),
             borderSide: const BorderSide(
-              color: Colors.grey,
+              color: Colors.white,
               width: 1.5,
             ),
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: primaryColor, width: 1.5),
-            borderRadius: BorderRadius.circular(8),
-          ),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(12),
             borderSide: const BorderSide(
               color: primaryColor,
               width: 1.5,

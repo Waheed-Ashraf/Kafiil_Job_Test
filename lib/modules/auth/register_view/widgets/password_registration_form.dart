@@ -1,6 +1,6 @@
 import 'package:cafiil_job_test/core/widgets/custom_button.dart';
 import 'package:cafiil_job_test/core/widgets/custom_text_field.dart';
-import 'package:cafiil_job_test/main.dart';
+import 'package:cafiil_job_test/modules/who_am_i/view/who_am_i.dart';
 import 'package:flutter/material.dart';
 
 class PasswordRegistrationForm extends StatefulWidget {
@@ -62,7 +62,7 @@ class _PasswordRegistrationFormState extends State<PasswordRegistrationForm> {
                 if (formKey1.currentState!.validate()) {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return const HomeView();
+                    return const WhoAmIView();
                   }));
                 }
               }),

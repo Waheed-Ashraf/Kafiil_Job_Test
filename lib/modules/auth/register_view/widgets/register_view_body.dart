@@ -26,7 +26,7 @@ class RegisterViewBody extends StatelessWidget {
               alignment: Alignment.center,
               child: Text(
                 'Introduce yourself',
-                style: AppStyles.styleMediam11.copyWith(color: primaryColor),
+                style: AppStyles.styleMedium11.copyWith(color: primaryColor),
               ),
             ),
             const SizedBox(

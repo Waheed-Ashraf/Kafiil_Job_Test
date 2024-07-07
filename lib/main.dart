@@ -1,3 +1,5 @@
+import 'package:cafiil_job_test/core/utils/constent_colors.dart';
+import 'package:cafiil_job_test/modules/auth/login_view/login_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,22 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
           useMaterial3: true,
         ),
-        home: const HomeView());
-  }
-}
-
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("Home View"),
-      ),
-    );
+        home: const LoginView());
   }
 }

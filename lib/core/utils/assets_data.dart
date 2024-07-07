@@ -1,26 +1,48 @@
-class AssetsData {
-  static String splashScreenImg = 'assets/images/clinic_engine_logo.png';
-  static String splashScreenBackGroundImg =
-      'assets/images/splash_backgraound.png';
-  static String googleIcon = 'assets/images/search.png';
-  static String notificationIcon = 'assets/images/notification.svg';
-  static String logoutIcon = 'assets/images/logout.svg';
-  static String icon1 = 'assets/images/my_investments.svg';
-  static String icon2 = 'assets/images/my_transctions.svg';
-  static String icon3 = 'assets/images/settings.svg';
-  static String icon4 = 'assets/images/statistics.svg';
-  static String icon5 = 'assets/images/wallet_account.svg';
-  static String searchIcon = 'assets/images/search-normal.svg';
+class Assets {
+  Assets._();
+  
+  /// Assets for imagesArrowBack
+  /// assets/images/arrow_back.svg
+  static const String imagesArrowBack = "assets/images/arrow_back.svg";
 
-  static String profileImage = 'assets/images/profileImage.png';
-  static String appointment = 'assets/images/appointment.png';
-  static String medicalFile = 'assets/images/medical-report.png';
-  static String askYourDoctor = 'assets/images/brain.png';
-  static String customerService = 'assets/images/customer-service.png';
-  static String accountSettings = 'assets/images/settings.png';
-  static String services = 'assets/images/services.png';
-  static String stethoscope = 'assets/images/stethoscope.png';
-  static String ultrasound = 'assets/images/ultrasound.png';
-  static String chemotherapy = 'assets/images/chemotherapy.png';
-  static String doctorPic = 'assets/images/doctor_pic.jpg';
+  /// Assets for imagesClipped1
+  /// assets/images/Clipped-1.svg
+  static const String imagesClipped1 = "assets/images/Clipped-1.svg";
+
+  /// Assets for imagesEarthIcon
+  /// assets/images/earthIcon.svg
+  static const String imagesEarthIcon = "assets/images/earthIcon.svg";
+
+  /// Assets for imagesImage
+  /// assets/images/Image.png
+  static const String imagesImage = "assets/images/Image.png";
+
+  /// Assets for imagesLinkedIn
+  /// assets/images/linkedIn.svg
+  static const String imagesLinkedIn = "assets/images/linkedIn.svg";
+
+  /// Assets for imagesLoginCuate
+  /// assets/images/Login-cuate.svg
+  static const String imagesLoginCuate = "assets/images/Login-cuate.svg";
+
+  /// Assets for imagesPath14
+  /// assets/images/path14.svg
+  static const String imagesPath14 = "assets/images/path14.svg";
+
+  /// Assets for imagesProfileImage
+  /// assets/images/profileImage.svg
+  static const String imagesProfileImage = "assets/images/profileImage.svg";
+
+  /// Assets for imagesShoppingCartSimple
+  /// assets/images/ShoppingCartSimple.svg
+  static const String imagesShoppingCartSimple = "assets/images/ShoppingCartSimple.svg";
+
+  /// Assets for imagesTwitter
+  /// assets/images/twitter.svg
+  static const String imagesTwitter = "assets/images/twitter.svg";
+
+  /// Assets for imagesUserCircle
+  /// assets/images/UserCircle.svg
+  static const String imagesUserCircle = "assets/images/UserCircle.svg";
 }
+

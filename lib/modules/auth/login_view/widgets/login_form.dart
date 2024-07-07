@@ -2,9 +2,9 @@ import 'package:cafiil_job_test/core/utils/app_styles.dart';
 import 'package:cafiil_job_test/core/utils/constent_colors.dart';
 import 'package:cafiil_job_test/core/widgets/custom_button.dart';
 import 'package:cafiil_job_test/core/widgets/custom_text_field.dart';
-import 'package:cafiil_job_test/main.dart';
+import 'package:cafiil_job_test/modules/auth/register_view/widgets/check_box_widget.dart';
+import 'package:cafiil_job_test/modules/who_am_i/view/who_am_i.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -25,10 +25,15 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Email Address',
+              style: AppStyles.styleMedium12,
+            ),
+          ),
           const SizedBox(height: 8),
           CustomTextField(
-            text: 'Enter the user name',
-            prefixIcon: FontAwesomeIcons.user,
             onChanged: (data) {
               email = data;
             },
@@ -44,10 +49,16 @@ class _LoginFormState extends State<LoginForm> {
               return null;
             },
           ),
+          const SizedBox(height: 16),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Password',
+              style: AppStyles.styleMedium12,
+            ),
+          ),
           const SizedBox(height: 8),
           CustomTextField(
-            text: "Enter your password",
-            prefixIcon: FontAwesomeIcons.lock,
             isPassword: true,
             onChanged: (data) {
               password = data;
@@ -60,23 +71,25 @@ class _LoginFormState extends State<LoginForm> {
               return null;
             },
           ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              GestureDetector(
-                onTap: () {},
-                child: Text('Forgot your password ?',
-                    style:
-                        AppStyles.styleRegular12.copyWith(color: primaryColor)),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(top: 9, bottom: 31),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const CheckboxWidget(),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text('Forgot your password ?',
+                      style: AppStyles.styleMedium12),
+                ),
+              ],
+            ),
           ),
           const SizedBox(
-            height: 16,
+            height: 4,
           ),
           SizedBox(
-            height: 40,
+            height: 56,
             child: CustomButton(
                 widget: const SizedBox(),
                 text: 'sign in',
@@ -84,7 +97,7 @@ class _LoginFormState extends State<LoginForm> {
                   if (formKey.currentState!.validate()) {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) {
-                      return const HomeView();
+                      return const WhoAmIView();
                     }));
                   }
                 }),

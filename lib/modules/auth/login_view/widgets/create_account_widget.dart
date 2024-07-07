@@ -11,15 +11,15 @@ class CreateAccountWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("You don't have an account. ", style: AppStyles.styleRegular12),
+        Text("Don't have an account ? ", style: AppStyles.styleMedium14),
         GestureDetector(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
               return const RegisterView();
             }));
           },
-          child: Text("Go to register",
-              style: AppStyles.styleSemiBold12.copyWith(color: primaryColor)),
+          child: Text("Register",
+              style: AppStyles.styleSemiBold14.copyWith(color: primaryColor)),
         ),
       ],
     );

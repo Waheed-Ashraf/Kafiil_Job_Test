@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
       color: color,
       minWidth: double.infinity,
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(12),
           side: withBorder
               ? const BorderSide(color: Colors.grey, width: 1)
               : BorderSide.none),
@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
           widget,
           Text(
             text,
-            style: AppStyles.styleMediam15.copyWith(
+            style: AppStyles.styleMedium15.copyWith(
               color: color == primaryColor ? Colors.white : primaryColor,
             ),
           ),
